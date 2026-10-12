@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/props/traffic_cone.glb" id="1_pack"]
+
+[node name="Cone" type="Node3D"]
+
+[node name="Scaler" type="Node3D" parent="."]
+
+[node name="Pack" parent="Scaler" instance=ExtResource("1_pack")]
+

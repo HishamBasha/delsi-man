@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/nature/oak_trees.glb" id="1_pack"]
+
+[node name="TreeBig" type="Node3D"]
+
+[node name="Scaler" type="Node3D" parent="."]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+
+[node name="Pack" parent="Scaler" instance=ExtResource("1_pack")]
+

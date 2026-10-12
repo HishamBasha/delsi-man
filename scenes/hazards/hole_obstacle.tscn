@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/hazards/hole_obstacle.gd" id="1"]
+
+[node name="HoleObstacle" type="Node3D"]
+script = ExtResource("1")
+metadata = {
+"kind": 4,
+"radius": 1.55
+}

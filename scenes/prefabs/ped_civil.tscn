@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/people/posed_police_people.glb" id="1_pack"]
+
+[node name="PedCivil" type="Node3D"]
+
+[node name="Scaler" type="Node3D" parent="."]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 0, 0, 0)
+
+[node name="Pack" parent="Scaler" instance=ExtResource("1_pack")]
+
+[node name="Drugdealer_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="1"]
+visible = false
+
+[node name="Police walk1_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="2"]
+visible = false
+
+[node name="Police walk2_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="3"]
+visible = false
+
+[node name="Police walk3_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="4"]
+visible = false
+
+[node name="Police idle5_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="5"]
+visible = false
+
+[node name="Plane" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="6"]
+visible = false
+
+[node name="Plane_001" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="7"]
+visible = false
+
+[node name="Plane_002" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="8"]
+visible = false
+
+[node name="Plane_003" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="9"]
+visible = false
+
+[node name="Plane_004" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="10"]
+visible = false
+
+[node name="Text" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="11"]
+visible = false
+
+[node name="Black guy what_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="12"]
+visible = false
+
+[node name="Plane_005" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="13"]
+visible = false
+
+[node name="Arrested guy_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="14"]
+visible = false
+
+[node name="Police kneeling aiming_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="15"]
+visible = false
+
+[node name="Police idle1_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="16"]
+visible = false
+
+[node name="Police idle2_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="17"]
+visible = false
+
+[node name="Police idle3_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="18"]
+visible = false
+
+[node name="Police idle4_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="19"]
+visible = false
+
+[node name="Police walk4_gameasset" parent="Scaler/Pack/Sketchfab_model/7a3971c208ae4e96a7f53584ba905619_fbx/RootNode" index="20"]
+visible = false
+

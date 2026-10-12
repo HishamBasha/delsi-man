@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1790795567
+art.gd::GDScript::-1::1790795360::0::1::::<>RefCounted<>::
+ASSET_REGISTER.md::TextFile::-1::1790795360::0::1::::<><>::
+course.gd::GDScript::-1::1790795360::0::1::::<>Node3D<>::
+export_presets.cfg::TextFile::-1::1790795360::0::1::::<><>::
+flavors.json::JSON::-1::1790795360::0::1::::<><>::
+game.gd::GDScript::-1::1790795360::0::1::::<>Node3D<>::
+level_01.json::JSON::-1::1790795360::0::1::::<><>::
+main.tscn::PackedScene::-1::1790795360::0::1::::<><>::res://scripts/game.gd
+profile.gd::GDScript::-1::1790795360::0::1::::<>RefCounted<>::
+README.md::TextFile::-1::1790795360::0::1::::<><>::
+runner.gd::GDScript::-1::1790795360::0::1::::<>Node3D<>::
+TEST_REPORT.md::TextFile::-1::1790795360::0::1::::<><>::

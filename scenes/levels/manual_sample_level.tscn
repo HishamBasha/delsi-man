@@ -1,0 +1,270 @@
+[gd_scene format=3 uid="uid://rj86du77fxl"]
+
+[ext_resource type="Script" uid="uid://cqh40bcvr15mh" path="res://scripts/course.gd" id="1_course"]
+[ext_resource type="Script" uid="uid://djgkgqpfurjyw" path="res://scripts/entities/bottle_pickup.gd" id="2_bottle"]
+[ext_resource type="Script" uid="uid://bsyhwdtmkg65q" path="res://scripts/entities/road_hazard.gd" id="3_hazard"]
+[ext_resource type="Script" uid="uid://crwt3ei4tg2a4" path="res://scripts/entities/finish_marker.gd" id="4_finish"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/barrier.tscn" id="p_bar"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/building_small.tscn" id="p_bs"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/building_tall.tscn" id="p_bt"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/building_tower.tscn" id="p_btw"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/cone.tscn" id="p_con"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/ped_civil.tscn" id="p_pc"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/ped_idle.tscn" id="p_pi"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/ped_walk.tscn" id="p_pw"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/car_sedan.tscn" id="p_sed"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/statue.tscn" id="p_sta"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/tree_big.tscn" id="p_tb"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/tree_med.tscn" id="p_tm"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/tree_small.tscn" id="p_ts"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/car_van.tscn" id="p_van"]
+[ext_resource type="PackedScene" path="res://scenes/prefabs/warehouse.tscn" id="p_wh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_BaseFloor"]
+size = Vector3(40, 0.2, 1800)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Road"]
+size = Vector3(14, 0.1, 1800)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Sidewalk"]
+size = Vector3(3, 0.1, 1800)
+
+[sub_resource type="BoxMesh" id="BoxMesh_Stripe"]
+size = Vector3(0.12, 0.05, 80)
+
+[node name="LevelRoot" type="Node3D" unique_id=1891983956]
+script = ExtResource("1_course")
+
+[node name="Ground" type="Node3D" parent="." unique_id=370260641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -900)
+
+[node name="BaseFloor" type="MeshInstance3D" parent="Ground" unique_id=1157893856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
+mesh = SubResource("BoxMesh_BaseFloor")
+
+[node name="Road" type="MeshInstance3D" parent="Ground" unique_id=1290794309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+mesh = SubResource("BoxMesh_Road")
+
+[node name="LeftSidewalk" type="MeshInstance3D" parent="Ground" unique_id=555881696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0.05, 0)
+mesh = SubResource("BoxMesh_Sidewalk")
+
+[node name="RightSidewalk" type="MeshInstance3D" parent="Ground" unique_id=902743865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.05, 0)
+mesh = SubResource("BoxMesh_Sidewalk")
+
+[node name="RoadStripeA" type="MeshInstance3D" parent="Ground" unique_id=1750803130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, -200)
+mesh = SubResource("BoxMesh_Stripe")
+
+[node name="RoadStripeB" type="MeshInstance3D" parent="Ground" unique_id=1017234398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, -600)
+mesh = SubResource("BoxMesh_Stripe")
+
+[node name="RoadStripeC" type="MeshInstance3D" parent="Ground" unique_id=717820161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, -1000)
+mesh = SubResource("BoxMesh_Stripe")
+
+[node name="RoadStripeD" type="MeshInstance3D" parent="Ground" unique_id=1003573608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, -1400)
+mesh = SubResource("BoxMesh_Stripe")
+
+[node name="LeftBuildings" type="Node3D" parent="." unique_id=1386293694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -900)
+
+[node name="L1" parent="LeftBuildings" unique_id=377984164 instance=ExtResource("p_bs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 750)
+
+[node name="L2" parent="LeftBuildings" unique_id=143314372 instance=ExtResource("p_bt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 450)
+
+[node name="L3" parent="LeftBuildings" unique_id=820128550 instance=ExtResource("p_btw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5, 0, 120)
+
+[node name="L4" parent="LeftBuildings" unique_id=223996945 instance=ExtResource("p_wh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, 0, -250)
+
+[node name="L5" parent="LeftBuildings" unique_id=800388942 instance=ExtResource("p_bt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -600)
+
+[node name="RightBuildings" type="Node3D" parent="." unique_id=96936518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -900)
+
+[node name="R1" parent="RightBuildings" unique_id=1606689476 instance=ExtResource("p_bt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 600)
+
+[node name="R2" parent="RightBuildings" unique_id=541677107 instance=ExtResource("p_bs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 250)
+
+[node name="R3" parent="RightBuildings" unique_id=2063273282 instance=ExtResource("p_btw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -100)
+
+[node name="R4" parent="RightBuildings" unique_id=46479073 instance=ExtResource("p_wh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, -450)
+
+[node name="R5" parent="RightBuildings" unique_id=119764906 instance=ExtResource("p_bs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -750)
+
+[node name="LeftBarrier" type="Node3D" parent="." unique_id=254241046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -900)
+
+[node name="RightBarrier" type="Node3D" parent="." unique_id=1830389007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -900)
+
+[node name="Car1" parent="." unique_id=1524877063 instance=ExtResource("p_sed")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -250)
+
+[node name="Car2" parent="." unique_id=1570935864 instance=ExtResource("p_van")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, -560)
+
+[node name="Car3" parent="." unique_id=1594005248 instance=ExtResource("p_sed")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 3.2, 0, -1150)
+
+[node name="Car4" parent="." unique_id=1777683156 instance=ExtResource("p_van")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -3.2, 0, -1500)
+
+[node name="Tree1" parent="." unique_id=994700473 instance=ExtResource("p_tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0.1, -200)
+
+[node name="Tree2" parent="." unique_id=1176209574 instance=ExtResource("p_ts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0.1, -650)
+
+[node name="Tree3" parent="." unique_id=1779068530 instance=ExtResource("p_tb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0.1, -1200)
+
+[node name="Tree4" parent="." unique_id=1339406587 instance=ExtResource("p_tm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.1, -400)
+
+[node name="Tree5" parent="." unique_id=161832555 instance=ExtResource("p_tb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.1, -850)
+
+[node name="Tree6" parent="." unique_id=2096858889 instance=ExtResource("p_ts")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.1, -1550)
+
+[node name="Ped1" parent="." unique_id=963074723 instance=ExtResource("p_pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.1, -180)
+
+[node name="Ped2" parent="." unique_id=2109941899 instance=ExtResource("p_pi")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -10.5, 0.1, -500)
+
+[node name="Ped3" parent="." unique_id=1547366632 instance=ExtResource("p_pc")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 10.5, 0.1, -780)
+
+[node name="Ped4" parent="." unique_id=531638723 instance=ExtResource("p_pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0.1, -1300)
+
+[node name="Barrier1" parent="." unique_id=658310666 instance=ExtResource("p_bar")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 7.5, 0, -700)
+
+[node name="Barrier2" parent="." unique_id=499108304 instance=ExtResource("p_bar")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 7.5, 0, -1170)
+
+[node name="Cone1" parent="." unique_id=440285171 instance=ExtResource("p_con")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8, 0, -715)
+
+[node name="Cone2" parent="." unique_id=472485738 instance=ExtResource("p_con")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1, 0, -1185)
+
+[node name="Cone3" parent="." unique_id=19028410 instance=ExtResource("p_con")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -120)
+
+[node name="Statue" parent="." unique_id=1580346498 instance=ExtResource("p_sta")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 4.2, 0, -1735)
+
+[node name="StartMarker" type="Node3D" parent="." unique_id=1428024775]
+
+[node name="FinishMarker" type="Node3D" parent="." unique_id=23069084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1800)
+script = ExtResource("4_finish")
+metadata/kind = 11
+
+[node name="HazardLeft" type="Node3D" parent="." unique_id=196903513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -80)
+script = ExtResource("3_hazard")
+metadata/kind = 0
+metadata/radius = 1.05
+metadata/look = 0
+metadata/drift_amp = 0.0
+metadata/drift_speed = 0.04
+
+[node name="HazardCenter" type="Node3D" parent="." unique_id=2051117139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -180)
+script = ExtResource("3_hazard")
+hazard_type = 1
+metadata/kind = 1
+metadata/radius = 1.05
+metadata/look = 0
+metadata/drift_amp = 0.0
+metadata/drift_speed = 0.04
+
+[node name="HazardRight" type="Node3D" parent="." unique_id=1920167125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -300)
+script = ExtResource("3_hazard")
+hazard_type = 2
+metadata/kind = 2
+metadata/radius = 1.05
+metadata/look = 0
+metadata/drift_amp = 0.0
+metadata/drift_speed = 0.04
+
+[node name="BottleA" type="Node3D" parent="." unique_id=513252806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0, -120)
+script = ExtResource("2_bottle")
+metadata/kind = 3
+metadata/radius = 0.9
+
+[node name="BottleB" type="Node3D" parent="." unique_id=1294180034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -240)
+script = ExtResource("2_bottle")
+color = Color(0.647059, 0.909804, 0.364706, 1)
+metadata/kind = 3
+metadata/radius = 0.9
+
+[node name="BottleC" type="Node3D" parent="." unique_id=108502229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0, -420)
+script = ExtResource("2_bottle")
+color = Color(1, 0.678431, 0.270588, 1)
+metadata/kind = 3
+metadata/radius = 0.9
+
+[node name="BottleD" type="Node3D" parent="." unique_id=1865470265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -580)
+script = ExtResource("2_bottle")
+color = Color(0.945098, 0.352941, 0.552941, 1)
+metadata/kind = 3
+metadata/radius = 0.9
+
+[node name="BottleE" type="Node3D" parent="." unique_id=1518093529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, -760)
+script = ExtResource("2_bottle")
+color = Color(0.933333, 0.819608, 0.537255, 1)
+metadata/kind = 3
+metadata/radius = 0.9
+
+[node name="BottleF" type="Node3D" parent="." unique_id=1349517722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, -980)
+script = ExtResource("2_bottle")
+metadata/kind = 3
+metadata/radius = 0.9
+
+[node name="BottleG" type="Node3D" parent="." unique_id=287830384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1200)
+script = ExtResource("2_bottle")
+color = Color(0.647059, 0.909804, 0.364706, 1)
+metadata/kind = 3
+metadata/radius = 0.9
+
+[node name="BottleH" type="Node3D" parent="." unique_id=939985101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, -1460)
+script = ExtResource("2_bottle")
+color = Color(1, 0.678431, 0.270588, 1)
+metadata/kind = 3
+metadata/radius = 0.9
+
+[node name="BottleI" type="Node3D" parent="." unique_id=569767480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0, -1660)
+script = ExtResource("2_bottle")
+color = Color(0.945098, 0.352941, 0.552941, 1)
+metadata/kind = 3
+metadata/radius = 0.9

@@ -1,0 +1,8 @@
+{"id":"festival_run_01","length":1800,"speed":13,"scene":"res://scenes/levels/manual_sample_level.tscn","sections":[
+ {"start":0,"title":"THE MARKET DASH","arabic":"انطلاقة السوق","flavor":0},
+ {"start":300,"title":"GARDEN WALK","arabic":"ممر الحدائق","flavor":1},
+ {"start":600,"title":"COASTAL RELAY","arabic":"سباق الساحل","flavor":2},
+ {"start":900,"title":"FESTIVAL OF LIGHTS","arabic":"مهرجان الأضواء","flavor":3},
+ {"start":1200,"title":"WAREHOUSE BREAKOUT","arabic":"الخروج من المستودع","flavor":4},
+ {"start":1500,"title":"THE FINAL DELIVERY","arabic":"التوصيل الأخير","flavor":0}
+]}

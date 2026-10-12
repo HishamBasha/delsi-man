@@ -1,7 +1,0 @@
-[
- {"id":"cola","name":"COLA","arabic":"كولا","color":"388bff","ability":"Fizz Rush","hint":"POWER: sprint through red crates","duration":4.0},
- {"id":"apple","name":"APPLE","arabic":"تفاح","color":"a5e85d","ability":"Green Spring","hint":"POWER: super jump · jump again in the air","duration":5.0},
- {"id":"orange","name":"ORANGE","arabic":"برتقال","color":"ffad45","ability":"Citrus Spin","hint":"POWER: floating jump over obstacles","duration":4.0},
- {"id":"pomegranate","name":"POMEGRANATE","arabic":"رمان","color":"f15a8d","ability":"Ruby Magnet","hint":"POWER: collect bottles across all lanes","duration":6.0},
- {"id":"ginger","name":"GINGER","arabic":"زنجبيل","color":"eed189","ability":"Golden Dash","hint":"POWER: phase safely through hazards","duration":3.0}
-]

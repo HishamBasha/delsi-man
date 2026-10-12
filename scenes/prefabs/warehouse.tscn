@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/buildings/warehouse_building.glb" id="1_pack"]
+
+[node name="Warehouse" type="Node3D"]
+
+[node name="Scaler" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Pack" parent="Scaler" instance=ExtResource("1_pack")]
+
+[node name="Object_3" parent="Scaler/Pack/Sketchfab_model/b509cc9330024ec683138a624aa86d9b_obj_cleaner_materialmerger_gles" index="1"]
+visible = false
+

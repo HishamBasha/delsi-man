@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/vehicles/low_poly_vehicle_mini_pack.glb" id="1_pack"]
+
+[node name="CarSedan" type="Node3D"]
+
+[node name="Scaler" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9, 1.312, 0)
+
+[node name="Pack" parent="Scaler" instance=ExtResource("1_pack")]
+
+[node name="pickup_body" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="0"]
+visible = false
+
+[node name="pickup_body_001" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="1"]
+visible = false
+
+[node name="pickup_body_002" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="2"]
+visible = false
+
+[node name="pickup_body_003" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="3"]
+visible = false
+
+[node name="btr_body" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="4"]
+visible = false
+
+[node name="btr_body_001" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="5"]
+visible = false
+
+[node name="btr_body_002" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="6"]
+visible = false
+
+[node name="btr_body_003" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="7"]
+visible = false
+
+[node name="sedan_body_001" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="9"]
+visible = false
+
+[node name="sedan_body_002" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="10"]
+visible = false
+
+[node name="sedan_body_003" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="11"]
+visible = false
+
+[node name="van_body_extra1" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="12"]
+visible = false
+
+[node name="van_body_extra1_002" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="13"]
+visible = false
+
+[node name="van_body_extra1_001" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="14"]
+visible = false
+
+[node name="van_body_extra1_003" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="15"]
+visible = false
+
+[node name="van_body_extra1_004" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="16"]
+visible = false
+
+[node name="van_body_extra1_005" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="17"]
+visible = false
+
+[node name="van_body_extra1_006" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="18"]
+visible = false
+
+[node name="van_body_extra1_007" parent="Scaler/Pack/Sketchfab_model/c7a2e11a1daf4934bbb15786296f9234_fbx/RootNode" index="19"]
+visible = false
+

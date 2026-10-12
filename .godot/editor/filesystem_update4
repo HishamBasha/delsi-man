@@ -1,0 +1,8 @@
+res://scripts/course.gd
+res://scripts/runner.gd
+res://scenes/levels/manual_sample_level.tscn
+res://scripts/game.gd
+res://scripts/hero.gd
+res://scripts/fx.gd
+res://scripts/main_menu.gd
+res://tools/probes/tmp_stand_probe.gd

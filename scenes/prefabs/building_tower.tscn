@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/models/buildings/futuristic_building.glb" id="1_pack"]
+
+[node name="BuildingTower" type="Node3D"]
+
+[node name="Scaler" type="Node3D" parent="."]
+transform = Transform3D(0.445, 0, 0, 0, 0.445, 0, 0, 0, 0.445, 0, 0, 0)
+
+[node name="Pack" parent="Scaler" instance=ExtResource("1_pack")]
+
